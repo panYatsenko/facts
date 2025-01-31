@@ -13,71 +13,95 @@
     <title>Facts</title>
   </head>
   <body>
-    <header>
-      <img src="assets/logo.png" alt="Facts logo" height="68" width="68" />
-      <h1>Today I learned</h1>
-      <button>Share a fact</button>
-    </header>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img
+            src="assets/images/logo.png"
+            alt="Facts logo"
+            height="68"
+            width="68"
+          />
+          <h1>Today I learned</h1>
+        </div>
+        <button class="btn btn-large">Share a fact</button>
+      </header>
 
-    <form action="">
-      <input type="text" placeholder="Share a fact with the world" />
-      <span>200</span>
-      <input type="text" placeholder="Trustworthy squrce..." />
-      <select>
-        <option value="">Choose category:</option>
-        <option value="technology">Technology</option>
-        <option value="science">Science</option>
-        <option value="finance">Finance</option>
-      </select>
-    </form>
+      <form class="fact-form" action="">
+        <input type="text" placeholder="Share a fact with the world" />
+        <span>200</span>
+        <input type="text" placeholder="Trustworthy squrce..." />
+        <select>
+          <option value="">Choose category:</option>
+          <option value="technology">Technology</option>
+          <option value="science">Science</option>
+          <option value="finance">Finance</option>
+        </select>
+        <button class="btn btn-large">Post</button>
+      </form>
 
-    <main>
-      <aside>
-        <ul>
-          <li>
-            <button>All</button>
-          </li>
-          <li>
-            <button>Technology</button>
-          </li>
-          <li>
-            <button>Science</button>
-          </li>
-        </ul>
-      </aside>
+      <main class="main">
+        <aside>
+          <ul>
+            <li>
+              <button class="btn btn-all-categories">All</button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #3b82f6"
+              >
+                Technology
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #16a34a"
+              >
+                Science
+              </button>
+            </li>
+          </ul>
+        </aside>
 
-      <section>
-        <ul>
-          <li>
-            <p class="fact">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa,
-              cum?
-              <a href="#" target="_blank">(Source)</a>
-              <span class="tag">#technology#</span>
-            </p>
-            <div>
-              <button>👍🏻 <strong>24</strong></button>
-              <button>🤯 <strong>9</strong></button>
-              <button>⛔️ <strong>4</strong></button>
-            </div>
-          </li>
-          <li>
-            <p class="fact">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Molestias dolorem sed corporis quasi porro ipsam eligendi libero
-              error harum ea, culpa debitis omnis quidem, deleniti autem
-              doloremque id laborum laudantium.
-              <a href="#" target="_blank">(Source)</a>
-              <span class="tag">#society#</span>
-            </p>
-            <div>
-              <button>👍🏻 <strong>24</strong></button>
-              <button>🤯 <strong>9</strong></button>
-              <button>⛔️ <strong>4</strong></button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
+        <section>
+          <ul>
+            <li class="fact">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa,
+                cum?
+                <a class="source" href="#" target="_blank">(Source)</a>
+              </p>
+              <span class="tag" style="background-color: #3b82f6"
+                >#technology#</span
+              >
+              <div class="vote-btns">
+                <button>👍🏻 <strong>24</strong></button>
+                <button>🤯 <strong>9</strong></button>
+                <button>⛔️ <strong>4</strong></button>
+              </div>
+            </li>
+            <li class="fact">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Molestias dolorem sed corporis quasi porro ipsam eligendi libero
+                error harum ea, culpa debitis omnis quidem, deleniti autem
+                doloremque id laborum laudantium.
+                <a class="source" href="#" target="_blank">(Source)</a>
+              </p>
+              <span class="tag" style="background-color: #eab308"
+                >#society#</span
+              >
+              <div class="vote-btns">
+                <button>👍🏻 <strong>24</strong></button>
+                <button>🤯 <strong>9</strong></button>
+                <button>⛔️ <strong>4</strong></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

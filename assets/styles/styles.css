@@ -1,21 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 48px 64px;
+  background-color: #292524;
+  color: #fafaf9;
+  font-family: "Sono", Arial, Helvetica, sans-serif;
+}
+
+/* MAIN LAYOUT */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fact-form {
+  margin-bottom: 40px;
+  background-color: #44403c;
+  padding: 16px 40px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+}
+/* ELEMENTS */
 h1 {
   font-size: 42px;
   text-transform: uppercase;
   text-align: center;
   font-family: "Coiny", Arial, Helvetica, sans-serif;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+.category {
+  margin-bottom: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo img {
+  width: 68px;
+  height: 68px;
 }
 
 .fact {
+  margin-bottom: 16px;
+  padding: 16px;
   font-size: 20px;
   line-height: 1.4;
-  font-family: "Sono", Arial, Helvetica, sans-serif;
+  letter-spacing: -1px;
+  background-color: #44403c;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .tag {
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-transform: uppercase;
   font-size: 14px;
 }
 
+.vote-btns {
+  margin-left: auto;
+}
+
 ul {
   list-style-type: none;
+}
+
+.source:visited,
+.source:link {
+  color: #a8a29e;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+
+.source:hover,
+.source:active {
+  color: #3b82f6;
+}
+
+.btn {
+  border: none;
+  padding: 16px 0 13px;
+  font-family: "Coiny", Arial, Helvetica, sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-style: 17px;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  color: inherit;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+  font-size: 20px;
+  padding: 20px 32px 17px;
+}
+
+.btn-all-categories {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
 }
