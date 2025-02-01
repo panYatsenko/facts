@@ -11,6 +11,10 @@ body {
   font-family: "Sono", Arial, Helvetica, sans-serif;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* MAIN LAYOUT */
 
 .container {
