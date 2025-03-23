@@ -59,29 +59,6 @@ async function loadFacts() {
   createFactList(data);
 }
 
-function createFactList(dataArray) {
-  const htmlArr = dataArray.map(
-    (fact) => `<li class="fact">
-    <p>
-    ${fact.text}
-        <a
-          class="source"
-          href="${fact.source}"
-          target="_blank"
-          >(Source)</a
-        >
-      </p>
-      <span class="tag" style="background-color: #3b82f6"
-        >${fact.category}</span
-      >
-    </li>`
-  );
-  console.log(htmlArr);
-
-  const html = htmlArr.join("");
-  factList.insertAdjacentHTML("afterbegin", html);
-}
-
 const categories = [
   { name: "technology", color: "#3b82f6" },
   { name: "science", color: "#16a34a" },
@@ -92,3 +69,35 @@ const categories = [
   { name: "history", color: "#f97316" },
   { name: "news", color: "#8b5cf6" },
 ];
+
+function createFactList(dataArray) {
+  const htmlArr = dataArray.map((fact) => {
+    const category = categories.find((cat) => cat.name === fact.category);
+    const categoryColor = category ? category.color : "#000000"; // Цвет по умолчанию, если категория не найдена
+
+    return `<li class="fact">
+      <p>
+        ${fact.text}
+        <a class="source" href="${fact.source}" target="_blank">(Source)</a>
+      </p>
+      <span class="tag" style="background-color: ${categoryColor}">
+        ${fact.category}
+      </span>
+    </li>`;
+  });
+
+  console.log(htmlArr);
+
+  const html = htmlArr.join("");
+  factList.insertAdjacentHTML("afterbegin", html);
+}
+
+btn.addEventListener("click", function () {
+  if (form.classList.contains("hidden")) {
+    form.classList.remove("hidden");
+    btn.textContent = "Close";
+  } else {
+    form.classList.add("hidden");
+    btn.textContent = "Share a Fact";
+  }
+});
